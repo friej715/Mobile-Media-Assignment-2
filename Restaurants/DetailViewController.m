@@ -17,7 +17,13 @@
 {
     [super viewDidLoad];
     restaurant = [[Restaurant alloc] init];
+    // creating a new restaurant; alloc init to create a new one
+    //restaurant.address = @"My Address"; // dot syntax works for properties
+  
     
+    cuisineLabel.text = [restaurant cuisineType];
+    
+    // glue code connecting view to model--restaurant is model, get address by calling 
     addressLabel.text = [restaurant address];
     navigationHeader.title = [restaurant name];
 }

@@ -10,6 +10,7 @@
 @interface DetailViewController : UIViewController
 {
     Restaurant* restaurant;
+    // as long as view is on screen, restaurant is assoc with it
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
