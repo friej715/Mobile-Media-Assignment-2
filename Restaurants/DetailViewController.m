@@ -33,7 +33,8 @@
     chefLabel.text = [restaurant chefName];
     phoneLabel.text = [restaurant phoneNumber];
     reviewLabel.text = [restaurant review];
-    ageLabel.text = [NSString stringWithFormat:@"%i (%i years ago)", restaurant.yearOpened, [restaurant age]];
+    ageLabel.text =  [NSString stringWithFormat:@"%i (%i years ago)", restaurant.yearOpened, [restaurant age]];
+    
 }
 
 - (void)viewDidUnload

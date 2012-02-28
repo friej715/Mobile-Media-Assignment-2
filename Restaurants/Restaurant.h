@@ -26,5 +26,6 @@
 @property(readwrite, strong) NSString* review;
 @property(readwrite) int yearOpened;
 
+-(int)age;
 
 @end
