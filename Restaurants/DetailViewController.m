@@ -10,6 +10,10 @@
 @synthesize addressLabel;
 @synthesize navigationHeader;
 @synthesize cuisineLabel;
+@synthesize chefLabel;
+@synthesize phoneLabel;
+@synthesize reviewLabel;
+@synthesize ageLabel;
 
 #pragma mark - View lifecycle
 
@@ -26,6 +30,10 @@
     // glue code connecting view to model--restaurant is model, get address by calling 
     addressLabel.text = [restaurant address];
     navigationHeader.title = [restaurant name];
+    chefLabel.text = [restaurant chefName];
+    phoneLabel.text = [restaurant phoneNumber];
+    reviewLabel.text = [restaurant review];
+    ageLabel.text = [NSString stringWithFormat:@"%i (%i years ago)", restaurant.yearOpened, [restaurant age]];
 }
 
 - (void)viewDidUnload
@@ -33,6 +41,10 @@
     [self setAddressLabel:nil];
     [self setNavigationHeader:nil];
     [self setCuisineLabel:nil];
+    [self setChefLabel:nil];
+    [self setPhoneLabel:nil];
+    [self setReviewLabel:nil];
+    [self setAgeLabel:nil];
     [super viewDidUnload];
 }
 
